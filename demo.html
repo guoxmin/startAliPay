@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>启动支付宝demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+</head>
+
+<body>
+    <button id="test">启动支付宝</button>
+    <script src="startAliPay.js"></script>
+    <script>
+    test.onclick = function() {
+
+        startAliPay({
+            url: 'alipays://platformapi/startApp?appId=2017101709350139&page=pages/index/index',
+            success: function() {
+
+            },
+            fail: function() {
+                alert("未启动")
+            }
+        });
+
+    }
+    </script>
+</body>
+
+</html>
